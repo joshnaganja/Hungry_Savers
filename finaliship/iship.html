@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUNGRY SAVERS</title>
+    <link rel="icon" type="image/x-icon" href="./logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./iship.css">
+</head>
+<body>
+    <div id="nav">
+        <div id="logo"><img src="./kussulogo.png">
+        <div id="companyname">HUNGRY SAVERS</div>
+        </div>
+        <div id="nav-links">
+            <div><a href="#reg">HOME</a></div>
+            <div><a href="#news">NEWS</a></div> 
+            <div><a href="#res">RESOURCES</a></div>
+            <div><a href="#feedback">FEEDBACK</a></div>
+            <div><a href="#aboutus">CONTACT US</a></div>
+            <div class="t"><a onclick="team()">TEAM</a></div>
+        </div>
+        <div class="login">
+            <button onclick="loginfunction()" class="l1">LOGIN</button>
+        </div>
+        <div id="listing" onclick="sidebar()">
+            <i class="fa-solid fa-list"></i>
+        </div>
+        <div id="list">
+            <div><a href="#reg">HOME</a></div>
+            <div><a href="#news">NEWS</a></div> 
+            <div><a href="#res">RESOURCES</a></div>
+            <div><a href="#feedback">FEEDBACK</a></div>
+            <div><a href="#aboutus">CONTACT US</a></div>
+            <div class="logins" onclick="loginfunction()">LOGIN</div>
+            <div id="back" onclick="closebar()">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+        </div>
+    </div>
+    <div class="reg" id="reg">
+    <div class="registrations">
+        <div class="donarregistration">
+            <div class="donarheading">DONAR REGISTRATION</div>
+            <div class="content">If you haven’t registered yet, please click the register button below to create an account. It only takes a few minutes and will help us coordinate your donations more efficiently.</div>
+            <button onclick="register()">REGISTER</button>
+        </div>
+        <div class="receiverregis">
+            <div class="donarheading">RECIEVER REGISTRATION</div>
+            <div class="content">If you haven’t registered yet, please click the register button below to create an account. It only takes a few minutes and will help us ensure you receive the food and support you need.</div>
+            <button onclick="register2()">REGISTER</button>
+        </div>
+    </div>
+    </div>
+    <div class="resource" id="res">
+        <h1 class="h1resource">RESOURCES</h1>
+        <div class="onesource">
+            <div class="source">
+            <div class="partone">
+                <img src="./food_donation.jpg">
+            </div>
+            <div class="parttwo">
+                <div class="foodhead">Food waste in the workplace parties</div>
+                Food wastage at workplace parties is a common issue, often stemming from over-preparation and lack of portion control. In the excitement of organizing the event, it's easy to underestimate the amount of food needed, leading to excess that goes uneaten. Additionally, buffet-style setups can encourage overeating and leaving behind large amounts of uneaten food. 
+            </div>
+            </div>
+            <div class="source">
+                <div class="partone">
+                    <img src="./seven.avif">
+
+                </div>
+                <div class="parttwo">
+                    <div class="foodhead">Food waste in restaurants</div>
+                    Food wastage in restaurants is a prevalent issue, often resulting from overestimating customer demand, large portion sizes, and strict quality standards. Restaurants may overstock perishable ingredients to ensure menu availability, leading to spoilage. Additionally, generous portion sizes and a wide variety of menu options can result in significant uneaten food being discarded. 
+                </div>
+            </div>
+        </div>
+        <div class="onesource">
+            <div class="source">
+            <div class="partone">
+                <img src="./nine.jpg">
+
+            </div>
+            <div class="parttwo">
+                <div class="foodhead">Food waste in family functions</div>
+                Food wastage in functions and events is a significant issue that often goes unnoticed. During celebrations, conferences, and large gatherings, substantial amounts of food are prepared to ensure that there is enough for all attendees. However, this often leads to over-preparation, resulting in excess food that goes uneaten.  Factors contributing to this waste is inaccurate guest counts.
+            </div>
+            </div>
+            <div class="source">
+                <div class="partone">
+                    <img src="./food_donation.jpg">
+
+                </div>
+                <div class="parttwo">
+                    <div class="foodhead">Food waste in grocery store</div>
+                    Food wastage in grocery store prepared foods is a significant issue, often due to overproduction, short shelf life, and lack of consumer demand. Items such as salads, sandwiches, baked goods, and hot meals that are not sold by the end of the day are frequently discarded. This waste occurs because stores aim to maintain freshness and meet customer expectations.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="news">
+        <div class="heading">NEWS</div>
+        <div id="new">
+            <div class="newone">
+                <div class="flip_front">
+                    <div class="flip_image">
+                    </div>
+                    <div class="flip_button"><button onclick="flip_rotate()">READ MORE</button></div>
+                </div>
+                <div class="flip_back">
+                <p>In India, 40% of the food wasted is equivalent to nearly 92,000 crore/year. This is equivalent to nearly 1% of the GDP which is depleted in the form of food wastage in India. Each person in India wastes 55 kg of food per year as per UN Environment Programme’s report.
+                    What might look like a harmless wastage of food deeply impacts the agricultural sector and affects the nation’s economy.
+                </p>
+                <button onclick="reverse()" class="reversee"><</button>
+                </div>
+                
+            </div>
+            <div class="newone">
+                <div class="flip_front">
+                    <div class="flip_image frontt">
+                    </div>
+                    <div class="flip_button"><button onclick="flip_rotate1()">READ MORE</button></div>
+                </div>
+                <div class="flip_back">
+                <p>Hunger and under-nutrition are the greatest threats to public health, killing more people than HIV/AIDS, malaria and tuberculosis combined. Each day, 25,000 people, including more than 10,000 children, die from hunger and related causes. Some 854 million people worldwide are estimated to be undernourished, and high food prices may drive another 100 million into poverty and hunger. </p>
+                <button onclick="reverse1()" class="reversee"><</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br/>
+    <br/>
+    <div id="aboutus">
+        <br/>
+        <br/>
+        <div id="about">CONTACT US</div>
+        <div id="mattering">
+        <div id="locations">
+            <a href="https://www.google.com/maps/place/Kakinada,+Andhra+Pradesh/@16.9767811,82.2472327,13z/data=!3m1!4b1!4m6!3m5!1s0x3a3827ddaf59b4f7:0x92f8ddb9c89a4803!8m2!3d16.9890648!4d82.2474648!16zL20vMDVuNTY4?entry=ttu" target="_blank"><img src="./map.jpg"></a>
+        </div>
+        <div id="matter">
+            <div class="headings">ADDRESS</div>
+            <div>
+                HungrySavers@2024,Surampalem,ADB Road,kakinada,Kakinada District,Andhra Pradesh,India.
+                <br><br>
+                All Rights Reserved.
+            </div>
+            <div class="headings">CONTACT</div>
+            <div>+91 140-256-8975</div>
+            <div>hungerysaver@gmail.com</div>
+            <div class="headings">SOCIAL MEDIA</div>
+            <div id="media">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-square-whatsapp"></i>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div id="feedback">
+        <div class="headings">FEEDBACK</div>
+        <div id="submitting">
+        <textarea rows="5" cols="40"></textarea>
+        <button>submit</button>
+        </div>
+    </div>
+    <script src="./iship.js"></script>
+    <script>
+        const a=JSON.parse(localStorage.getItem("main")) || [];
+    </script>
+</body>
+</html>
+

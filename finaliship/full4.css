@@ -1,0 +1,524 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff8e1;
+    color: #444;
+    overflow-x: hidden; 
+}
+.logins{
+    cursor: pointer;
+}
+.t{
+    cursor: pointer;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.pro{
+ margin-top: -20px;
+ cursor: pointer;
+}
+.swiper-container {
+    width: 100%;
+    height: 600px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.slide:hover{
+    scale: 1.08;
+}
+.container {
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: #eaeaea;
+    
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin: 20px 0;
+}
+.card:hover{
+    scale: 1.05;
+}
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff3e0;
+    box-sizing: border-box;
+}
+.card img {
+    width: 100%;
+    height: 60%;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #ef6c00;
+}
+
+.card p {
+    color: #6d4c41;
+}
+
+.card .btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    padding-left: 0;
+    text-align: center;
+    background-color: #ef6c00;
+    color:black;
+    font-family: cursive;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.h3{
+    font-family: cursive;
+    font-weight: bold;
+}
+.h2{
+    font-family: cursive;
+    font-weight: bold;
+}
+.card .btn-secondary {
+    background-color: #ff7043;
+}
+
+.benefits {
+    padding: 20px;
+    background-color: #ffe0b2;
+    text-align: center;
+}
+
+.benefits h2 {
+    color: #e65100;
+}
+
+.benefits p {
+    color: #6d4c41;
+}
+
+.about {
+    padding: 20px;
+    background-color:#eaeaea;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.about h2 {
+    color: #e65100;
+}
+
+.about p {
+    color: #6d4c41;
+}
+.reduce-food-waste {
+    background-color: #eaeaea;
+    padding: 20px;
+    text-align: center;
+}
+
+.reduce-food-waste h2 {
+    color: #e65100;
+}
+
+.reduce-food-waste p {
+    color: #6d4c41;
+}
+.Reduce Food Waste Image{
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+    margin-top: 20px; 
+}
+.image:hover{
+    scale: 1.03;
+}
+footer {
+    background-color:#FF8600;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer .social-icons {
+    margin: 10px 0;
+}
+
+footer .social-icons a {
+    color:black;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+footer .social-icons a:hover {
+    color: #ffcc80;
+}
+.image{
+    width:100%;
+    height:100%;
+}
+.matter{
+    line-height: 30px;
+    color: black;
+}
+.empty{
+    width: 100svw;
+    height: 15svh;
+    position: relative;
+}
+ #nav {
+    width: 100svw;
+    height: 13svh;
+    display: flex;
+    position: fixed;
+    /* background-color: #FF8600; */
+    background: linear-gradient(to bottom,#e07400,#FF8600);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+#logo {
+    width: 125px;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    width: 70%;
+    height: 80%;
+    transition: transform 0.3s ease;
+}
+
+
+#companyname {
+    width: 100%;
+    height: 20%;
+    font-size: 13px;
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+#nav-links {
+    width: 50%;
+    height: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+#nav-links div a:hover {
+    color: white;
+}
+
+#list {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 0px;
+    height: 100svh;
+    background-color: black;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    transition: 2s all;
+    overflow: hidden;
+}
+
+#list div {
+    color: white;
+    font-size: 15px;
+    height: 8%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login {
+    width: 50px;
+    height: 40%;
+    border-radius: 5px;
+    overflow: hidden;
+    border: hidden;
+    display: flex;
+   justify-content: space-between;
+   position: relative;
+   right:10px;
+}
+#loginlist{
+    position:absolute;
+    top:80px;
+    right:5%;
+    width:90px;
+    height:5svh;
+    background-color: black;
+    flex-direction: column;
+    padding:10px;
+    /* display:none; */
+    z-index: 999999;
+    /* display:flex;
+    flex-direction: column;
+    gap:25px; */
+    border-radius: 10px;
+    display:none;
+}
+#loginlist div{
+    color:white;
+    font-size: 15px;
+    height:8%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.l1{
+    font-family: cursive;
+}
+.butlogin {
+    height: 100%;
+    width: 100%;
+    /* transition: background-color 0.3s ease; */
+    background-color: #FFE0B2;
+    border:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.butlogin:hover {
+    background-color: #e07400;
+    cursor: pointer;
+
+}
+
+#listing {
+    display: none;
+    width: 50px;
+    height: 50px;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+}
+
+
+@media (max-width: 768px) {
+    .swiper-container {
+        height: 400px; 
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; 
+        max-width: none; 
+    }
+
+    .benefits, .about {
+        padding: 15px;
+    }
+
+    .benefits h2, .about h2 {
+        font-size: 1.5em; 
+    }
+
+    .benefits p, .about p {
+        font-size: 1em; 
+    }
+    #loginlist{
+        position:absolute;
+        top:80px;
+        right:2%;
+    }
+}
+
+@media (max-width: 480px) {
+    .swiper-container {
+        height: 300px; 
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .card .btn {
+        padding: 8px;
+    }
+
+    .benefits h2, .about h2 {
+        font-size: 1.2em; 
+    }
+
+    .benefits p, .about p {
+        font-size: 0.9em; 
+    }
+}
+@media (max-width: 768px) {
+    .reduce-food-waste p {
+        font-size: 0.9em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .reduce-food-waste p {
+        font-size: 0.8em; 
+    }
+    .Reduce Food Waste Image{
+        width: 50%; 
+        height: auto; 
+        margin-top: 20px; 
+    }
+}
+.reduce-food-waste {
+    background-color: #eaeaea;
+    padding: 20px;
+    text-align: center;
+}
+
+.reduce-food-waste h2 {
+    color: #e65100;
+}
+
+.reduce-food-waste p {
+    color: #6d4c41;
+}
+
+.reduce-food-waste img {
+    width: 70%; 
+    max-width: 100%; 
+    height: auto; 
+    margin-top: 20px; 
+}
+@media (max-width: 768px) {
+    .reduce-food-waste p {
+        font-size: 0.9em; 
+    }
+}
+
+@media (max-width: 480px) {
+    .reduce-food-waste p {
+        font-size: 0.8em; 
+    }
+    .reduce-food-waste img {
+        width: 80%; 
+        margin-top: 15px; 
+    }
+}
+@media screen and (max-width:1100px) {
+    #nav-links
+    {
+        width:60%;
+    }
+}
+@media screen and (max-width:850px)
+{
+    #logo
+    {
+        width:110px;
+        height:75%;
+    }
+    #companyname
+    {
+        font-size: 10px;
+    }
+    #nav-links
+    {
+        font-size: 10px;
+    }
+    #login
+    {
+        width:50px;
+        border-radius: 5px;
+        overflow: hidden;
+        border:hidden;
+    }
+    .login button
+    {
+        width:100%;
+        height:100%;
+        border:hidden;
+    }
+}
+@media screen and (max-Width:600px)
+{
+    #nav-links
+    {
+        display: none;
+    }
+    #login
+    {
+        display: none;
+    }
+    #listing
+    {
+        display: block;
+        position: relative;
+        right:10px;
+    }
+}
+@media screen and (max-width:600px) {
+    #nav
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    #list
+    {
+       display: block;
+        padding:0px;
+    }
+    .donarheading
+    {
+        font-size:25px;
+    }
+    .content
+    {
+        font-size: 18px;
+    }
+}
+
+

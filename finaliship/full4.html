@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation Management System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./full4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="nav">
+        <div id="logo"><img src="./logo-removebg-preview.png">
+        <div id="companyname">HUNGRY SAVERS</div>
+        </div>
+        <div id="nav-links">
+            <div><a href="./iship.html #reg">HOME</a></div>
+            <div><a href="./iship.html #news">NEWS</a></div> 
+            <div><a href="./iship.html #res">RESOURCES</a></div>
+            <div><a href="./iship.html #feedback">FEEDBACK</a></div>
+            <div><a href="./iship.html #aboutus">CONTACT US</a></div>
+            <div class="t" onclick="team()">TEAM</div>
+        </div>
+        <div id="login" onclick="come()" >
+            <div class="butlogin" class="l1"><i class="fa-solid fa-user"></i></div>
+        </div>
+
+        <div id="loginlist">
+            <div class="b1" onclick="secondfunction()">PROFILE</div><br>
+            <div class="b2" onclick="firstfunction()">LOGOUT</div>
+        </div>
+        
+        
+        <div id="listing" onclick="sidebar()">
+            <i class="fa-solid fa-list"></i>
+        </div>
+        <div id="list">
+            <div><a href="../iship.html #reg">HOME</a></div>
+            <div><a href="../iship.html #news">NEWS</a></div> 
+            <div><a href="../iship.html #res">RESOURCES</a></div>
+            <div><a href="../iship.html #feedback">FEEDBACK</a></div>
+            <div><a href="../iship.html #aboutus">CONTACT US</a></div><br>
+            <div class="pro" onclick="secondfunction()">PROFILE</div>
+            <div class="logins" onclick="firstfunction()">LOGOUT</div>
+            <div id="back" onclick="closebar()">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="empty"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./don2.jpg" alt="Slide 5" class="slide"></div>
+            <div class="swiper-slide"><img src="./google10.webp" alt="Slide 1" class="slide"></div>
+            <div class="swiper-slide"><img src="./don4.jpg" alt="Slide 4" class="slide"></div>
+            <div class="swiper-slide"><img src="./google3.jpg" alt="Slide 3" class="slide"></div>
+            <div class="swiper-slide"><img src="./don8.png" alt="Slide 2" class="slide"></div>
+            <div class="swiper-slide"><img src="./google11.jpg" alt="Slide 6" class="slide"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="cards">
+            <div class="card">
+                <img src="./google12.jpg" alt="Donate Food">
+                <div class="card-content">
+                    <h3 class="h3">DONATE FOOD</h3>
+                    <p>Help those in need by donating excess food. Your contributions can make a significant difference.</p>
+                    <a href="./donate_lst.html" class="btn">DONATE NOW</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="google13.jpg" alt="Receive Food">
+                <div class="card-content">
+                    <h3 class="h3">RECEIVE FOOD</h3>
+                    <p>If you are in need of food, you can receive donations from our network. We are here to help you.</p>
+                    <a href="./accept.html" class="btn btn-secondary">RECEIVE NOW</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ben">
+        <div class="benefits">
+            <h2 class="h2">Benefits of Food Donation</h2>
+            <p>Food donation provides a vital service to those in need. It helps reduce food waste, supports the community, and provides essential nutrition to those who might otherwise go without. Your contributions make a meaningful impact on the lives of others.</p>
+            <p>Additionally, food donation helps in the efficient utilization of surplus food that would otherwise go to waste. It is an environmentally sustainable practice that reduces the burden on landfills and contributes to a healthier planet. By participating in food donation, you are not only helping those in need but also contributing to a more sustainable future.</p>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="h3">List of organization</h3>
+                        <p>View the list of individuals and organizations who have generously donated food to help those in need.</p>
+                        <a href="http://127.0.0.1:5500/table_data.html" class="btn">List of organization</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="h3">Nearby Donors</h3>
+                        <p>Find nearby locations where you can donate or receive food. Our network is here to assist you.</p>
+                        <a href="./donars.html" class="btn btn-secondary">NEARBY DONORS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reduce-food-waste">
+        <div class="container">
+            <h2 class="h2">Reduce Food Waste</h2>
+            <p class="matter">Reducing food waste is crucial for sustainability. By donating excess food, we help minimize waste and ensure it reaches those in need.Food waste is a global issue affecting millions. At our organization, we tackle this problem by connecting surplus food with those in need. By working together with donors, volunteers, and community partners, we ensure that food reaches its fullest potential, reducing waste and nourishing our communities.
+            Through innovative programs and dedicated efforts, we strive to create a sustainable future where no food goes to waste and everyone has access to nutritious meals.</p>
+        </div></p>
+            <img src="./food2.png" alt="Reduce Food Waste Image" class="image">
+        </div>
+    </div>
+    <div class="aboutus">
+        <div class="about">
+            <h2 class="h2">About Us</h2>
+            <p class="matter">We are a dedicated team committed to reducing hunger and food waste. Our mission is to connect donors with those in need and ensure that no one goes hungry. We believe in the power of community and the importance of giving back.We are a passionate team dedicated to making a difference in our community. Our mission is simple: to alleviate hunger and reduce food waste. Every day, we connect generous donors with individuals and families in need, ensuring that surplus food is put to good use.Founded on the belief that together we can create positive change, our organization strives to foster a sense of compassion and responsibility towards our environment and fellow citizens.</p>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright &copy; &nbsp;HungrySavers@2024;Designed by HungrySavers</p>
+            <p >All Rights Reserved.</p>
+            <p>Follow For More Inforamation</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=1234567890"><i class="fab fa-whatsapp"></i></a>
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@latest/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 3000, 
+            },
+            loop: true, 
+            speed: 800, 
+        });
+    </script>
+    <script src="./full4.js"></script>
+</body>
+
+</html>

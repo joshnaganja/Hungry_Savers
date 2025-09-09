@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-parent {
+    width: 100%;
+    max-width: 800px;
+    background-color: #444;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic {
+    background:linear-gradient(to bottom right,#ff8600,#eaeaea,#ffc875);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    color: black;
+    background-color:#EAEAEA;
+    border: 5px solid lightgray;
+    position: relative;
+}
+.profile-picture i{
+    color: black;
+    font-size: 100px;
+    position: absolute;
+    bottom: 18px;
+    right: 25px;
+    
+}
+/* .profile-picture:hover{
+    background:linear-gradient(to top, #ff8600,#ffc875,#eaeaea);
+    scale: 1.03;
+    border: none;
+} */
+.profile-details {
+    margin-top: 10px;
+}
+
+.profile-name, .profile-location {
+    margin: 10px 0;
+    color:#ff8600;
+    font-family: cursive;
+    font-weight: bold;
+}
+.profile-name:hover, .profile-location:hover{
+    color: black;
+}
+.profile-info {
+    padding: 20px;
+    /* background-color: grey; */
+    background-image: url(./1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-about-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-title {
+    font-size: 24px;
+    font-weight: bold;
+    color:black;
+    font-family: cursive;
+    font-weight: bold;
+}
+.profile-title:hover{
+    color: #ff8600;
+}
+.profile-col-div1, .profile-col-div2 {
+    width: 48%;
+}
+
+.profile-divisions, .profile-mat {
+    margin: 10px 0;
+    color: black;
+}
+.profile-mat , .profile-divisions{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1ps solid grey;
+    border-radius: 8px;
+}
+
+.profile-divisions{
+    height: 50px;
+    margin-left: 10px;
+    /* padding: 0px; */
+    /* display: flex;
+    justify-content: end; */
+    /* text-wrap:wrap; */
+}
+
+.profile-save-changes {
+    text-align: center;
+    margin-top: 20px;
+    
+}
+
+.profile-save-changes button{
+    padding: 10px 20px;
+    background-color:grey;
+    color:black;
+    border: none;
+    font-family: cursive;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 2;
+}
+
+.profile-save-changes button:hover {
+    background-color: #555;
+    color: black;
+}
+.profile-main{
+    display: flex;
+    background-color: transparent;
+    /* border: 1px solid grey; */
+}
+.profile-main:hover{
+ scale: 1.05;
+ /* box-shadow: 0px 20px 10px grey; */
+}
+@media (max-width: 600px) {
+    .profile-col-div1, .profile-col-div2 {
+        width: 100%;
+    }
+
+    .profile-hero-section {
+        flex-direction: column;
+    }
+    .addr{
+        height: 80px;
+        text-wrap: wrap;
+    }
+    .addre1{
+        font-size: 14px;
+    }
+}
+.profile-mat:hover{
+    transform: scale(1.01);
+}
+@media (max-width:400px)
+{
+    .profile-divisions{
+        font-size: 12px;
+    }
+}
+.profile-save-changes-button{
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    width: 150px ;
+}
+.profile-save-changes-button::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ff8600;
+    left: 150px;
+    top: 0px;
+    transition: all 2s;
+    color: black;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-save-changes-button:hover::before{
+    left:0px;
+}

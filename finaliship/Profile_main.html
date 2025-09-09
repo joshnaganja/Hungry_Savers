@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="Profile_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <div class="profile-parent">
+        <div class="profile-pic">
+            <div class="profile-picture">
+                <!-- <img src="./Images/1.jpg" alt="Profile Picture"> -->
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="profile-details">
+                <div class="profile-name"></div>
+                <div class="profile-location"></div>
+            </div>
+        </div>
+        <div class="profile-info">
+            <div class="profile-about-bar">
+                <div class="profile-title">About</div>
+            </div>
+            <div class="profile-hero-section">
+                <div class="profile-main">
+                    <div class="profile-col-div1">
+                        <div class="profile-divisions">Full Name :</div>
+                        <div class="profile-divisions  addre2">Email Address :</div>
+                        <div class="profile-divisions">Phone Number :</div>
+                        <!-- <div class="profile-divisions">Date of Birth :</div> -->
+                        <div class="profile-divisions">Gender :</div>
+                        <div class="profile-divisions addre1">Primary Address :</div>
+                        <div class="profile-divisions addre1">Secondary Address :</div>
+                        <div class="profile-divisions alter1">City :</div>
+                        <div class="profile-divisions alter1">Region :</div>
+                        <div class="profile-divisions alter1">Country :</div>
+                        <div class="profile-divisions alter1">Pin Code :</div>
+                    </div>
+                    <div class="profile-col-div2">
+                        <input type="text" class="profile-mat" onchange="editProfile()"/>
+                        <input type="email" class="profile-mat" onchange="editProfile()"/>
+                        <input type="number" class="profile-mat" onchange="editProfile()"/>
+                        <!-- <input type="text" class="profile-mat" onchange="editProfile()"/> -->
+                        <input type="text" class="profile-mat"onchange="editProfile()"/>
+                        <!-- <input type="text" class="profile-mat addre" onchange="editProfile()"/>
+                        <input type="text" class="profile-mat addre" onchange="editProfile()"/> -->
+                        <textarea name="" id="" class="profile-mat" onchange="editProfile()"></textarea>
+                        <textarea name="" id="" class="profile-mat" onchange="editProfile()"></textarea>
+                        <input type="text" class="profile-mat" onchange="editProfile()"/>
+                        <input type="text" class="profile-mat" onchange="editProfile()"/>
+                        <input type="text" class="profile-mat" onchange="editProfile()"/>
+                        <input type="number" class="profile-mat"onchange="editProfile()"/>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-save-changes">
+                <button class="profile-save-changes-button">Save Changes</button></div>
+        </div>
+   </div> 
+   <script src="Profile_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Register Form</title>
+    <link rel="stylesheet" href="organization.css">
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <section class="container">
+        <header>Organization Registration Form</header>
+        <form id="registrationForm" class="form">
+            <div class="input-box">
+                <label for="full-name">Full Name</label>
+                <input id="full-name" type="text" placeholder="Enter full name" required />
+            </div>
+            <div class="input-box">
+                <label for="email-address">Email Address</label>
+                <input id="email-address" type="email" placeholder="Enter email address" required />
+            </div>
+            <div class="input-box">
+                <label for="phone-number">Phone Number</label>
+                <input id="phone-number" type="tel" placeholder="Enter phone number" required />
+            </div>
+            <div class="input-box address">
+                <label for="address-1">Address 1</label>
+                <input id="address-1" type="text" placeholder="Enter street address" required />
+            </div>
+            <div class="input-box address">
+                <label for="address-2">Address 2</label>
+                <input id="address-2" type="text" placeholder="Enter street address line 2" />
+            </div>
+            <div class="column">
+                <div class="input-box select-box">
+                    <!-- <label >State</label> -->
+                    <select id="state" required>
+                        <option hidden>Select state</option>
+                        <option value="AndhraPradesh">Andhra Pradesh</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Karnataka">Karnataka</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="city">City</label>
+                    <input id="city" type="text" placeholder="Enter your city" required />
+                </div>
+            </div>
+            <div class="input-box column">
+                <label for="pincode">Pincode</label>
+                <input id="pincode" type="text" placeholder="Enter postal code" required />
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <script src="./main.js"></script>
+</body>
+</html>

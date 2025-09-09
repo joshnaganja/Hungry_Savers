@@ -1,0 +1,755 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+a{
+    text-decoration: none !important; 
+    color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.logins{
+    cursor: pointer;
+}
+.t{
+    cursor: pointer;
+    color:blueviolet;
+}
+#nav {
+    width: 100svw;
+    height: 15svh;
+    display: flex;
+    position: fixed;
+    /* background-color: #FF8600; */
+    background: linear-gradient(to bottom,#FF8600,#fcf4e8);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+#nav:hover {
+    /* background-color: #e07400; */
+    background: linear-gradient(to bottom,#e07400,#FF8600);
+}
+#nav:hover a{
+    color: white;
+}
+
+#logo {
+    width: 125px;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    width: 70%;
+    height: 80%;
+    transition: transform 0.3s ease;
+}
+
+
+#companyname {
+    width: 100%;
+    height: 20%;
+    font-size: 13px;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+#nav-links {
+    width: 50%;
+    height: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+
+#nav-links div a:hover {
+    color: white;
+}
+
+#list {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 0px;
+    height: 100svh;
+    background-color: black;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    transition: 2s all;
+    overflow: hidden;
+}
+#list div {
+    color: white;
+    font-size: 15px;
+    height: 8%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login {
+    width: 120px;
+    height: 40%;
+    border-radius: 50px;
+    overflow: hidden;
+    border: hidden; 
+}
+.l1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.login button {
+    height: 100%;
+    width: 100%;
+    /* transition: background-color 0.3s ease; */
+    background-color: #FFE0B2;
+    border:hidden;
+}
+.login button:hover {
+    background-color: #e07400;
+    cursor: pointer;
+}
+#listing {
+    display: none;
+    width: 50px;
+    height: 50px;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+}
+.reg {
+    top: 100px;
+    width: 90%;
+    padding: 5%;
+    position: relative;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAEAEA;
+    background-image: url(./backimage1.avif);
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+}
+.registrations {
+    width: 100%;
+    position: relative;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.registrations:hover .donarregistration {
+    background-color: #FFD6A1;
+}
+.registrations:hover .receiverregis {
+    background-color: #C2E0B7;
+}
+
+
+
+
+
+
+.donarregistration, .receiverregis {
+    width: 600px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.donarregistration:hover, .receiverregis:hover {
+    transform: translateY(-10px);
+}
+
+.donarregistration {
+    background-color: #FFE0B2;
+}
+
+.receiverregis {
+    background-color: #CCD7C5;
+}
+
+.donarheading {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.content {
+    width: 90%;
+    height: fit-content;
+    font-size: 18px;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.donarregistration button, .receiverregis button {
+    width: 150px;
+    height: 50px;
+    border-radius: 8px;
+    border: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.donarregistration button:hover, .receiverregis button:hover {
+    background-color: #e07400;
+    cursor: pointer;
+}
+
+.donarregistration button {
+    background-color: #FF8600;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.receiverregis button {
+    background-color: #FF8600;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.resource {
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #F0F8ED;
+}
+
+.h1resource {
+    color: orange;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    top: 50px;
+}
+
+.resource h1 {
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.onesource {
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 80px;
+}
+
+.source {
+    border-radius: 10px;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.source:hover {
+    transform: translateY(-10px);
+}
+
+.partone {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.partone img {
+    width: 250px;
+    height: 150%;
+    border-radius: 50%;
+    z-index: 8;
+    transition: transform 0.3s ease;
+}
+
+.partone img:hover {
+    transform: scale(1.1);
+}
+
+.parttwo {
+    width: 96%;
+    height: 60%;
+    text-align: center;
+    font-size: 17px;
+    background-color: #FFE0B2;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+    padding-top: 100px;
+    border-radius: 8px;
+}
+
+.foodhead {
+    width: 96%;
+    height: 10%;
+    font-size: 130%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    padding-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#aboutus {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 75svh;
+    background-color: #F0F8ED;
+    overflow: hidden;
+}
+
+#about {
+    width: 100%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    color: orange;
+    font-family: cursive;
+    position: relative;
+    top: 30px;
+}
+
+#mattering {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#locations {
+    width: 25%;
+    height: 65%;
+}
+
+#locations img {
+    padding: 5px;
+    width: 100%;
+    height: 90%;
+    transition: transform 0.3s ease;
+}
+
+#locations img:hover {
+    transform: scale(1.1);
+}
+
+#matter {
+    width: 60%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#media {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 25px;
+    gap: 15px;
+    font-weight: lighter;
+    margin-top: -10px;
+}
+
+.headings {
+    height: 10%;
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: 10px;
+    font-family: cursive;
+}
+
+#feedback {
+    position: relative;
+    top: 10px;
+    width: 99%;
+    padding: 2px;
+    height: 30svh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    overflow: hidden;
+}
+
+#feedback .headings {
+    height: 30%;
+    font-size: 40px;
+}
+
+#feedback button {
+    width: 150px;
+    height: 35px;
+    border-radius: 8px;
+    border: hidden;
+    transition: background-color 0.3s ease;
+}
+
+#feedback button:hover {
+    background-color: #e07400;
+}
+#feedback textarea{
+    border:hidden;
+}
+
+footer {
+    width: 100%;
+    height: 20svh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+}
+
+footer .headings {
+    font-size: 25px;
+}
+#submitting
+{
+    width:fit-content;
+    height:fit-content; 
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+#submitting button
+{
+    align-self: flex-end;
+}
+#news
+{
+    position: relative;
+    top:50px;
+    width: 100%;
+    height:fit-content;
+    background-color: #fcf4e8;
+}
+
+#news .heading
+{
+    width:100%;
+    text-align: center;
+    font-size:50px;
+    color:orange;
+    margin-top: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    top:30px;
+
+}
+#new
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:10px;
+    padding:10px;
+   
+}
+.flip_front{
+    width: 400px;
+    height: 300px;
+    backface-visibility: hidden;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+.flip_image{
+    width: 400px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./news1removed.jpeg);
+    background-size: cover;
+}
+.flip_image img{
+    height: 100%;
+    /* width: 100%; */
+}
+.flip_button{
+    width: 400px;
+    height: 50px;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center;  */
+    margin-top: 10px;
+    justify-content: center;
+
+}
+.flip_back{
+    background-color: #C2E0B7;
+    height: 300px;
+    width: 400px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+.reversee{
+    font-size: 35px;
+}
+.frontt{
+    background-image: url(./news2.webp);
+    background-size: cover;
+}
+
+.newone
+{
+    width:400px;
+    height:300px;
+    /* background-color:#F2F2F2; */
+    border-radius: 8px;
+    /* padding:15px; */
+    font-size:20px;
+    box-shadow: 2px 2px 5px grey;
+    margin-top: 50px;
+    transition: all 1s ease;
+    position: relative;
+    transform-style: preserve-3d;
+}
+/* .newone:hover{
+    background-color: #C2E0B7;
+} */
+.newone button
+{
+    width:100px;
+    height:50px;
+    background-color: #FF8600;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    font-family: cursive;
+    transition: background-color 1s ease;
+}
+.newone button:hover{
+    cursor: pointer;
+}
+@media screen and (max-width:500px)
+{
+    .flip_back{
+        background-color: #C2E0B7;
+        height: 300px;
+        width: 400px;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        position:absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    
+    }
+    .flip_button{
+        width: 200px;
+    
+    }
+    .newone
+    {
+        font-size:20px;
+        width:80%;
+    }
+    .flip_image{
+        width:125%;
+        height:300px;
+    }
+    .flip_front{
+        width:80%;
+    }
+    .flip_back{
+        width:100%;
+        height: 400px;
+    }
+    #new
+    {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        gap:10px;
+        padding:10px;
+        flex-direction: column;
+    }
+    .newone
+    {
+        height:400px;
+    
+    }
+
+    
+    
+}
+@media screen and (max-width:600px){
+    .source
+    {
+        width:300px;
+        height:300px;
+    }
+    .partone img
+    {
+        width:150px;
+    }
+    .parttwo
+    {
+        height:80%;
+        font-size: 14px;
+        padding-top: 70px;
+    }
+    .resource h1
+    {
+        font-size: 35px;
+    }
+    #about
+    {
+        font-size: 35px;
+    }
+    .headings
+    {
+        font-size: 20px;
+    }
+    #media
+    {
+        font-size: 20px;
+    }
+    #matter div:nth-child(2)
+    {
+        font-size:12px;
+    }
+}
+@media screen and (max-width:1100px) {
+    #nav-links
+    {
+        width:60%;
+    }
+}
+@media screen and (max-width:850px)
+{
+    #logo
+    {
+        width:110px;
+        height:75%;
+    }
+    #companyname
+    {
+        font-size: 10px;
+    }
+    #nav-links
+    {
+        font-size: 10px;
+    }
+    .login
+    {
+        width:100px;
+        border-radius: 5px;
+        overflow: hidden;
+        border:hidden;
+    }
+    .login button
+    {
+        width:100%;
+        height:100%;
+        border:hidden;
+    }
+}
+@media screen and (max-Width:600px)
+{
+    #nav-links
+    {
+        display: none;
+    }
+    .login
+    {
+        display: none;
+    }
+    #listing
+    {
+        display: block;
+        position: relative;
+        right:10px;
+    }
+}
+@media screen and (max-width:600px) {
+    #nav
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+    #list
+    {
+       display: block;
+        padding:0px;
+    }
+    .donarheading
+    {
+        font-size:25px;
+    }
+    .content
+    {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1300px) {
+    .registrations
+    {
+        gap:50px;
+    }
+}
+
+

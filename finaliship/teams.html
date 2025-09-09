@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: bisque;
+            flex-direction: column;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            position: relative;
+            width: 650px;
+            height: 650px;
+            border: 2px solid black;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .container .icon {
+            position: relative;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .container .icon .imgbx {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            transition: 0.5s;
+            border: 1px solid white;
+            box-shadow: 0 0 0 4px black, 0 0 0 6px white;
+            transform: rotate(calc(360deg / 6 * var(--i)));
+            transform-origin: 360px;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .container .icon .imgbx.active {
+            box-shadow: 0 0 0 6px black, 0 0 0 12px red;
+        }
+
+        .container .icon .imgbx.active img {
+            filter: grayscale(0);
+        }
+
+        .container .icon .imgbx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transform: rotate(calc(-360deg / 6 * var(--i)));
+            transition: 0.5s;
+            filter: grayscale(1);
+        }
+
+        .content {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content::before {
+            content: '';
+            position: absolute;
+            inset: 60px;
+            border: 4px solid transparent;
+            border-left: 4px solid #2196f3;
+            border-right: 4px solid black;
+            border-radius: 50%;
+            animation: hungry_saver 5s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .content::after {
+            content: '';
+            position: absolute;
+            inset: 120px;
+            border: 4px solid transparent;
+            border-left: 4px solid red;
+            border-right: 4px solid black;
+            border-radius: 50%;
+            animation: hungry_saver1 2.5s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .contentBx {
+            position: absolute;
+            transform: scale(0);
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contentBx.active {
+            transform: scale(1);
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+
+        .contentBx .card {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contentBx .card .imgbx {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .contentBx .card .imgbx img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contentBx .card .txtbx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .contentBx .card .txtbx h2 {
+            position: relative;
+            font-size: 1.25em;
+            font-weight: 600;
+            color: black;
+            text-align: center;
+            line-height: 1em;
+            text-transform: uppercase;
+        }
+
+        .contentBx .card .txtbx h2 span {
+            font-size: 0.65em;
+            color: black;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+        }
+
+        .contentBx .card .txtbx .sci {
+            position: relative;
+            display: flex;
+            gap: 7px;
+            margin-top: 10px;
+        }
+
+        .contentBx .card .txtbx .sci li {
+            list-style: none;
+        }
+
+        .contentBx .card .txtbx .sci li a {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #444;
+            color: wheat;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+        .contentBx .card .txtbx .sci li a:hover {
+            background: blue;
+        }
+
+        .info-container {
+            display: none;
+            max-width: 400px;
+            color: black;
+            text-align: center;
+        }
+
+        .info-container.active {
+            display: block;
+        }
+
+        @keyframes hungry_saver {
+            0% {
+                rotate: 0deg;
+            }
+
+            100% {
+                rotate: 360deg;
+            }
+        }
+
+        @keyframes hungry_saver1 {
+            0% {
+                rotate: 360deg;
+            }
+
+            100% {
+                rotate: 0deg;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 500px;
+                height: 500px;
+            }
+
+            .container .icon .imgbx {
+                width: 60px;
+                height: 60px;
+                transform-origin: 260px;
+            }
+
+            .content::before {
+                inset: 40px;
+            }
+
+            .content::after {
+                inset: 80px;
+            }
+
+            .contentBx .card .imgbx {
+                width: 120px;
+                height: 120px;
+            }
+
+            .contentBx .card .txtbx h2 {
+                font-size: 1em;
+            }
+
+            .contentBx .card .txtbx h2 span {
+                font-size: 0.5em;
+            }
+
+            .contentBx .card .txtbx .sci li a {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 300px;
+                height: 300px;
+            }
+
+            .container .icon .imgbx {
+                width: 40px;
+                height: 40px;
+                transform-origin: 160px;
+            }
+
+            .content::before {
+                inset: 20px;
+            }
+
+            .content::after {
+                inset: 40px;
+            }
+
+            .contentBx .card .imgbx {
+                width: 80px;
+                height: 80px;
+            }
+
+            .contentBx .card .txtbx h2 {
+                font-size: 0.75em;
+            }
+
+            .contentBx .card .txtbx h2 span {
+                font-size: 0.4em;
+            }
+
+            .contentBx .card .txtbx .sci li a {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="icon">
+                <div class="imgbx active" style="--i:1;" data-id="content1" data-info="infoContent1">
+                    <img src="./images/4.jpg" alt="jk">
+                </div>
+                <div class="imgbx" style="--i:2;" data-id="content2" data-info="infoContent2">
+                    <img src="./images/5.jpeg" alt="jk">
+                </div>
+                <div class="imgbx" style="--i:3;" data-id="content3" data-info="infoContent3">
+                    <img src="./images/6.jpg" alt="jk">
+                </div>
+                <div class="imgbx" style="--i:4;" data-id="content4" data-info="infoContent4">
+                    <img src="./images/7.jpg" alt="jk">
+                </div>
+                <div class="imgbx" style="--i:5;" data-id="content5" data-info="infoContent5">
+                    <img src="./images/8.png" alt="jk">
+                </div>
+                <div class="imgbx" style="--i:6;" data-id="content6" data-info="infoContent6">
+                    <img src="./images/9.jpg" alt="jk">
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="contentBx active" id="content1">
+                    <div class="card">
+                        <div class="imgbx">
+                            <img src="./images/4.jpg" alt="">
+                        </div>
+                        <div class="txtbx">
+                            <h2>JayaKrishna <br> <span>Front-End Developer</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBx" id="content2">
+                    <div class="card">
+                        <div class="imgbx">
+                            <img src="./images/5.jpeg" alt="">
+                        </div>
+                        <div class="txtbx">
+                            <h2>Kusuma Kumari Devika<br> <span>Back-End Developer</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBx" id="content3">
+                    <div class="card">
+                        <div class="imgbx">
+                            <img src="./images/6.jpg" alt="">
+                        </div>
+                        <div class="txtbx">
+                            <h2>Sai Prabhakar<br> <span>Supporter</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBx" id="content4">
+                    <div class="card">
+                        <div class="imgbx">
+                            <img src="./images/7.jpg" alt="">
+                        </div>
+                        <div class="txtbx">
+                            <h2>Mahesh<br> <span>Manager</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBx" id="content5">
+                    <div class="card">
+                        <div class="imgbx">
+                            <img src="./images/8.png" alt="jk">
+                        </div>
+                        <div class="txtbx">
+                            <h2>JoshnaDevi<br> <span>Content Creator</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contentBx" id="content6">
+                    <div class="card">
+                        <div class="imgbx">
+                            <img src="./images/9.jpg" alt="">
+                        </div>
+                        <div class="txtbx">
+                            <h2>Uday-Santhosh<br> <span>Java-script Developer</span></h2>
+                            <ul class="sci">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-container" id="infoContent1">
+            <h2>JayaKrishna</h2>
+            <p>Front-End</p>
+        </div>
+        <div class="info-container" id="infoContent2">
+            <h2>Kusuma Kumari Devika</h2>
+            <p>Back-End</p>
+        </div>
+        <div class="info-container" id="infoContent3">
+            <h2>Sai Prabhakar</h2>
+            <p>Designer</p>
+        </div>
+        <div class="info-container" id="infoContent4">
+            <h2>Mahesh</h2>
+            <p>This is information about V.</p>
+        </div>
+        <div class="info-container" id="infoContent5">
+            <h2>JoshnaDevi</h2>
+            <p>Content Creator</p>
+        </div>
+        <div class="info-container" id="infoContent6">
+            <h2>Uday Santhosh</h2>
+            <p>Java-script</p>
+        </div>
+    </div>
+
+    <script>
+        const imageBoxes = document.querySelectorAll('.imgbx');
+        const contentBoxes = document.querySelectorAll('.contentBx');
+        const infoContainers = document.querySelectorAll('.info-container');
+
+        imageBoxes.forEach(imageBox => {
+            imageBox.addEventListener('click', () => {
+                imageBoxes.forEach(box => box.classList.remove('active'));
+                contentBoxes.forEach(box => box.classList.remove('active'));
+                infoContainers.forEach(container => container.classList.remove('active'));
+
+                imageBox.classList.add('active');
+                document.getElementById(imageBox.dataset.id).classList.add('active');
+                document.getElementById(imageBox.dataset.info).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

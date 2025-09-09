@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="donate_lst.css">
+</head>
+<body>
+  <h1>Donate</h1>
+  
+  <div class="form">
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="contact" placeholder="Contact">
+    <input type="text" id="email" placeholder="Address">
+  </div>
+  
+  <div class="items">
+    <input type="text" id="in" placeholder="foodItem"><br>
+    <input type="text" id="quantity" placeholder="Quantity (g)">
+  </div>
+  
+  <button id="adding_btn">Add Item</button>
+  <button id="submit" style="display:none;"><a href="./full4.html">Submit</a></button>
+  <button id="cancel" style="display:none;">Cancel</button>
+  
+  <div id="food_lists_container"></div>
+
+  <script src="./donate.lst.js"></script>
+</body>
+</html>
